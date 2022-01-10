@@ -108,7 +108,6 @@ Delete Theater
 - HTTP Method: `DELETE`
 - Request Header:
   - Accept: `application/json`
-```
 - Response Body (Success):
 ```
 {
