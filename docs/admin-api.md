@@ -1,8 +1,9 @@
-Admin API
-=========
+# Admin API
 
-Get List of Theaters
--------------
+## Theaters
+
+### Get List of Theaters
+
 - Purpose: getting all existing theaters
 - Endpoint: `/backend/theater/list/{location}`
 - HTTP Method: `GET`
@@ -43,8 +44,7 @@ Get List of Theaters
 }
 ```
 
-Get Theater Detail
-------------------
+### Get Theater Detail
 
 - Purpose: getting an existing theater object
 - Endpoint: `/backend/theater/{theaterId}`
@@ -86,8 +86,7 @@ Get Theater Detail
 }
 ```
 
-Create Theater
---------------
+### Create Theater
 
 - Purpose: creating new theater object
 - Endpoint: `/backend/theater/create`
@@ -135,8 +134,7 @@ Create Theater
 }
 ```
 
-Edit Theater
-------------
+### Edit Theater
 
 - Purpose: editing existing theater object
 - Endpoint: `/backend/theater/{theaterId}`
@@ -185,8 +183,7 @@ Edit Theater
 }
 ```
 
-Delete Theater
-------------
+### Delete Theater
 
 - Purpose: deleting existing theater object
 - Endpoint: `/backend/theater/{theaterId}`
@@ -217,8 +214,9 @@ Delete Theater
 }
 ```
 
-Get Available Movies
-------------------
+## Movies
+
+### Get Available Movies
 
 - Purpose: getting all available movies
 - Endpoint: `/backend/movie/available-list`
@@ -270,8 +268,7 @@ Get Available Movies
 }
 ```
 
-Create Movie
-------------
+### Create Movie
 
 - Purpose: creating new movie object
 - Endpoint: `/backend/movie/create`
