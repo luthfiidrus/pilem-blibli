@@ -312,3 +312,80 @@
   "status": "INTERNAL_SERVER_ERROR"
 }
 ```
+
+### Edit Movie
+
+- Purpose: editing existing movie object
+- Endpoint: `/backend/movie/{movieId}`
+- HTTP Method: `PUT`
+- Request Header:
+  - Accept: `application/json`
+  - Content-Type: `application/json`
+- Request Body:
+```
+{
+  "movieId": "1357"
+  "landscapeImage": base64image,
+  "potraitImage": base64image,
+  "name": "Big Hero 6",
+  "ageCategory": {
+    "id": "SU",
+    "name": "Semua Umur"
+  },
+  "duration": 120 //minutes
+}
+```
+- Response Body (Success):
+```
+{
+  "code": 200,
+  "data": {
+    // **TBD**
+  },
+  "status": "OK"
+}
+```
+- Response Body (Fail):
+```
+{
+  "code": 403,
+  "status": "FORBIDDEN"
+}
+```
+```
+{
+  "code": 500,
+  "status": "INTERNAL_SERVER_ERROR"
+}
+```
+
+### Delete Movie
+
+- Purpose: deleting existing movie object
+- Endpoint: `/backend/movie/{movieId}`
+- HTTP Method: `DELETE`
+- Request Header:
+  - Accept: `application/json`
+- Response Body (Success):
+```
+{
+  "code": 200,
+  "data": {
+    // **TBD**
+  },
+  "status": "OK"
+}
+```
+- Response Body (Fail):
+```
+{
+  "code": 403,
+  "status": "FORBIDDEN"
+}
+```
+```
+{
+  "code": 500,
+  "status": "INTERNAL_SERVER_ERROR"
+}
+```
