@@ -105,6 +105,7 @@
     "021-12345678",
     "021-09876543"
   ],
+  "image": base64image,
   "priceMondayToThursday": 35000,
   "priceFriday": 40000,
   "priceSaturdayToSunday": 50000
@@ -154,6 +155,7 @@
     "021-12345678",
     "021-09876543"
   ],
+  "image": base64image,
   "priceMondayToThursday": 40000,
   "priceFriday": 45000,
   "priceSaturdayToSunday": 50000
