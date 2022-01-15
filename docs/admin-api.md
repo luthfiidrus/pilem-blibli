@@ -391,3 +391,222 @@
   "status": "INTERNAL_SERVER_ERROR"
 }
 ```
+
+### Get List of Movies in Specific Theater
+
+- Purpose: getting all movies in specific theater
+- Endpoint: `/backend/movie/{theaterId}`
+- HTTP Method: `GET`
+- Request Header:
+  - Accept: `application/json`
+- Response Body (Success):
+```
+{
+  "code": 200,
+  "data": {
+    "movies": [
+      {
+        "id": 1357,
+        "name": "Big Hero 6",
+        "ageCategory": {
+          "id": "SU",
+          "name": "Semua Umur"
+        },
+        "potraitImage": base64image,
+        "duration": 105 //minutes
+      },
+      {
+        "id": 1358,
+        "name": "Frozen 2",
+        "ageCategory": {
+          "id": "SU",
+          "name": "Semua Umur"
+        },
+        "potraitImage": base64image,
+        "duration": 110 //minutes
+      }
+    ]
+  },
+  "status": "OK"
+}
+```
+- Response Body (Fail):
+```
+{
+  "code": 403,
+  "status": "FORBIDDEN"
+}
+```
+```
+{
+  "code": 500,
+  "status": "INTERNAL_SERVER_ERROR"
+}
+```
+
+### Add Movie Schedule
+
+- Purpose: Adding movie schedule in a theater
+- Endpoint: `/backend/movie/{movieId}/schedule` //TBD
+- HTTP Method: `POST`
+- Request Header:
+  - Accept: `application/json`
+  - Content-Type: `application/json`
+- Request Body:
+```
+{
+  "theaterId": "1092834",
+  "studioId": 1,
+  "startTimeAndDate": 1642219448 //EPOCH FORMAT
+}
+```
+- Response Body (Success);
+```
+{
+  "code": 200,
+  "data": {
+    // **TBD**
+  },
+  "status": "OK"
+}
+```
+- Response Body (Fail):
+```
+{
+  "code": 403,
+  "status": "FORBIDDEN"
+}
+```
+```
+{
+  "code": 500,
+  "status": "INTERNAL_SERVER_ERROR"
+}
+```
+
+### Get Specific Movie Schedules with Specific Theater
+
+- Purpose: getting specific movie schedules with Specific Theater
+- Endpoint: `/backend/movie/{movieId}/schedule`
+- HTTP Method: `GET`
+- Request Header:
+  - Accept: `application/json`
+- Request Param:
+  - theaterId String
+- Response Body (Success):
+```
+{
+  "code": 200,
+  "data": [
+    {
+      "date": 1642220528,
+      "studio": [
+        {
+          "id": 1,
+          "time": [
+            {
+              "text": "13.00",
+              "exist": false
+            },
+            {
+              "text": "17.00",
+              "exist": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "time": [
+            {
+              "text": "15.00",
+              "exist": false
+            },
+            {
+              "text": "20.00",
+              "exist": true
+            }
+          ]
+        },
+      ]
+    },
+    {
+      "date": 1642220530,
+      "studio": [
+        {
+          "id": 1,
+          "time": [
+            {
+              "text": "07.00",
+              "exist": false
+            },
+            {
+              "text": "17.00",
+              "exist": true
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "time": [
+            {
+              "text": "12.00",
+              "exist": false
+            },
+            {
+              "text": "18.00",
+              "exist": true
+            }
+          ]
+        },
+      ]
+    }
+  ],
+  "status": "OK"
+}
+```
+- Response Body (Fail):
+```
+{
+  "code": 403,
+  "status": "FORBIDDEN"
+}
+```
+```
+{
+  "code": 500,
+  "status": "INTERNAL_SERVER_ERROR"
+}
+```
+
+### Delete Specific Movie in Theater
+
+- Purpose: deleting movie in theater
+- Endpoint: `/backend/movie/{movieId}`
+- HTTP Method: `DELETE`
+- Request Header:
+  - Accept: `application/json`
+- Request Param:
+  - theaterId String
+- Request Body (Success):
+```
+{
+  "code": 200,
+  "data":{
+    // **TBD**
+  },
+  "status": "OK"
+}
+```
+- Response Body (Fail):
+```
+{
+  "code": 403,
+  "status": "FORBIDDEN"
+}
+```
+```
+{
+  "code": 500,
+  "status": "INTERNAL_SERVER_ERROR"
+}
+```
