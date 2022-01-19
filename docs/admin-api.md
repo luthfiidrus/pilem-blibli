@@ -610,3 +610,154 @@
   "status": "INTERNAL_SERVER_ERROR"
 }
 ```
+
+### Create Studio
+
+- Purpose: creating new studio object
+- Endpoint: `/backend/studio/create`
+- HTTP Method: `POST`
+- Request Header:
+  - Accept: `application/json`
+  - Content-Type: `application/json`
+- Request Body:
+```
+{
+  "name": "Studio 1",
+  "seatsRow": 9,
+  "seatsColumn": 3
+}
+```
+- Response Body (Success):
+```
+{
+  "code": 200,
+  "data": {
+    "id": "584cb254-659d-4172-b7af-972390ebd2b6 ",
+    "name": "Studio 1",
+    "seatsRow": 9,
+    "seatsColumn": 3
+  },
+  "status": "OK"
+}
+```
+- Response Body (Fail):
+```
+{
+  "code": 403,
+  "status": "FORBIDDEN"
+}
+```
+```
+{
+  "code": 500,
+  "status": "INTERNAL_SERVER_ERROR"
+}
+```
+
+### Delete Studio
+
+- Purpose: deleting existing studio object
+- Endpoint: `/backend/studio/{studioId}`
+- HTTP Method: `DELETE`
+- Request Header:
+  - Accept: `application/json`
+- Response Body (Success):
+```
+{
+  "code": 200,
+  "data": {
+    // **TBD**
+  },
+  "status": "OK"
+}
+```
+- Response Body (Fail):
+```
+{
+  "code": 403,
+  "status": "FORBIDDEN"
+}
+```
+```
+{
+  "code": 500,
+  "status": "INTERNAL_SERVER_ERROR"
+}
+```
+
+### Edit Studio
+
+- Purpose: editing existing studio object
+- Endpoint: `/backend/studio/{studioId}`
+- HTTP Method: `PUT`
+- Request Header:
+  - Accept: `application/json`
+  - Content-Type: `application/json`
+- Request Body:
+```
+{
+  "seatsRow": 3,
+  "seatsColumn": 4
+}
+```
+- Response Body (Success):
+```
+{
+  "code": 200,
+  "data": {
+    // **TBD**
+  },
+  "status": "OK"
+}
+```
+- Response Body (Fail):
+```
+{
+  "code": 403,
+  "status": "FORBIDDEN"
+}
+```
+```
+{
+  "code": 500,
+  "status": "INTERNAL_SERVER_ERROR"
+}
+```
+
+### Edit Meals
+
+- Purpose: editing existing meals object
+- Endpoint: `/backend/meals/{mealsId}`
+- HTTP Method: `PUT`
+- Request Header:
+  - Accept: `application/json`
+  - Content-Type: `application/json`
+- Request Body:
+```
+{
+  "stock": 3
+}
+```
+- Response Body (Success):
+```
+{
+  "code": 200,
+  "data": {
+    // **TBD**
+  },
+  "status": "OK"
+}
+```
+- Response Body (Fail):
+```
+{
+  "code": 403,
+  "status": "FORBIDDEN"
+}
+```
+```
+{
+  "code": 500,
+  "status": "INTERNAL_SERVER_ERROR"
+}
+```
