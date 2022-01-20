@@ -459,7 +459,7 @@
 ### Add Movie Schedule
 
 - Purpose: Adding movie schedule in a theater
-- Endpoint: `/backend/movie/{movieId}/schedule` //TBD
+- Endpoint: `/backend/movie/{movieId}/schedule`
 - HTTP Method: `POST`
 - Request Header:
   - Accept: `application/json`
