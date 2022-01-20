@@ -476,7 +476,12 @@
 ```
 {
   "code": 200,
-  "data": true,
+  "data": {
+    "scheduleId": 123,
+    "theaterId": "1092834",
+    "studioId": 1,
+    "startTimeAndDate": 1642219448 //EPOCH FORMAT
+  },
   "status": "OK"
 }
 ```
