@@ -116,7 +116,19 @@
 {
   "code": 200,
   "data": {
-    // **TBD**
+    "id": 1456,
+    "name": "Pondok Indah Mall 2",
+    "abbreviationName": "PIM 2",
+    "detailLocation": "Pondok Indah Mall Lantai 2",
+    "city": "Jakarta",
+    "phones": [
+      "021-12345678",
+      "021-09876543"
+    ],
+    "image": base64image,
+    "priceMondayToThursday": 35000,
+    "priceFriday": 40000,
+    "priceSaturdayToSunday": 50000
   },
   "status": "OK"
 }
@@ -166,7 +178,19 @@
 {
   "code": 200,
   "data": {
-    // **TBD**
+    "theaterId": "1092834", // mandatory field
+    "name": "Pondok Indah Mall 2",
+    "abbreviationName": "PIM 2",
+    "detailLocation": "Pondok Indah Mall Lantai 2",
+    "city": "Jakarta",
+    "phones": [
+      "021-12345678",
+      "021-09876543"
+    ],
+    "image": base64image,
+    "priceMondayToThursday": 40000,
+    "priceFriday": 45000,
+    "priceSaturdayToSunday": 50000
   },
   "status": "OK"
 }
@@ -196,9 +220,7 @@
 ```
 {
   "code": 200,
-  "data": {
-    // **TBD**
-  },
+  "data": true,
   "status": "OK"
 }
 ```
@@ -234,20 +256,14 @@
       {
         "id": 1357,
         "name": "Big Hero 6",
-        "ageCategory": {
-          "id": "SU",
-          "name": "Semua Umur"
-        },
+        "ageCategory": "SU",
         "potraitImage": base64image,
         "duration": 105 //minutes
       },
       {
         "id": 1358,
         "name": "Frozen 2",
-        "ageCategory": {
-          "id": "SU",
-          "name": "Semua Umur"
-        },
+        "ageCategory": "SU",
         "potraitImage": base64image,
         "duration": 110 //minutes
       }
@@ -284,10 +300,7 @@
   "landscapeImage": base64image,
   "potraitImage": base64image,
   "name": "Big Hero 6",
-  "ageCategory": {
-    "id": "SU",
-    "name": "Semua Umur"
-  },
+  "ageCategory": "SU",
   "duration": 105 //minutes
 }
 ```
@@ -296,7 +309,12 @@
 {
   "code": 200,
   "data": {
-    // **TBD**
+    "id": 123,
+    "landscapeImage": base64image,
+    "potraitImage": base64image,
+    "name": "Big Hero 6",
+    "ageCategory": "SU",
+    "duration": 105 //minutes
   },
   "status": "OK"
 }
@@ -326,14 +344,11 @@
 - Request Body:
 ```
 {
-  "movieId": "1357"
+  "movieId": "1357",
   "landscapeImage": base64image,
   "potraitImage": base64image,
   "name": "Big Hero 6",
-  "ageCategory": {
-    "id": "SU",
-    "name": "Semua Umur"
-  },
+  "ageCategory": "SU",
   "duration": 120 //minutes
 }
 ```
@@ -342,7 +357,12 @@
 {
   "code": 200,
   "data": {
-    // **TBD**
+    "movieId": "1357",
+    "landscapeImage": base64image,
+    "potraitImage": base64image,
+    "name": "Big Hero 6",
+    "ageCategory": "SU",
+    "duration": 120 //minutes
   },
   "status": "OK"
 }
@@ -372,9 +392,7 @@
 ```
 {
   "code": 200,
-  "data": {
-    // **TBD**
-  },
+  "data": true,
   "status": "OK"
 }
 ```
@@ -408,20 +426,14 @@
       {
         "id": 1357,
         "name": "Big Hero 6",
-        "ageCategory": {
-          "id": "SU",
-          "name": "Semua Umur"
-        },
+        "ageCategory": "SU",
         "potraitImage": base64image,
         "duration": 105 //minutes
       },
       {
         "id": 1358,
         "name": "Frozen 2",
-        "ageCategory": {
-          "id": "SU",
-          "name": "Semua Umur"
-        },
+        "ageCategory": "SU",
         "potraitImage": base64image,
         "duration": 110 //minutes
       }
@@ -464,9 +476,7 @@
 ```
 {
   "code": 200,
-  "data": {
-    // **TBD**
-  },
+  "data": true,
   "status": "OK"
 }
 ```
@@ -591,9 +601,7 @@
 ```
 {
   "code": 200,
-  "data":{
-    // **TBD**
-  },
+  "data": true,
   "status": "OK"
 }
 ```
@@ -665,9 +673,7 @@
 ```
 {
   "code": 200,
-  "data": {
-    // **TBD**
-  },
+  "data": true,
   "status": "OK"
 }
 ```
@@ -705,7 +711,9 @@
 {
   "code": 200,
   "data": {
-    // **TBD**
+    "studioId: 123,
+    "seatsRow": 3,
+    "seatsColumn": 4
   },
   "status": "OK"
 }
@@ -743,7 +751,8 @@
 {
   "code": 200,
   "data": {
-    // **TBD**
+    "mealsId": 123,
+    "stock": 4,
   },
   "status": "OK"
 }
